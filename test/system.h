@@ -1,8 +1,13 @@
 #include "nBody.h"
-
 class System{
     public:
-        void initSystem(int numBodies);
+        System(int n){
+            numBodies = n;
+            initSystem();
+        }
+
+        void initSystem();
+        void fillBodies();
     private:
         int numBodies; 
         nBody* Bodies;
