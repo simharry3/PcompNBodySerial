@@ -1,13 +1,13 @@
-#include "nBody.h"
-#include <system.h>
+
+#include "system.h"
 
 
 int main(){
     int numBodies  = 1000;
     int steps = 1000;
-    system sys;
+    System sys;
     sys.initSystem(numBodies);
-    while(n < steps){
+    for(int n = 0; n < steps; ++n){
         //calculateSystem();
         //stepSystem();
     }
