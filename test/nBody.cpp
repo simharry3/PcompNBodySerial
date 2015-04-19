@@ -9,10 +9,13 @@ tuple<float, float, float> nBody::returnVelocity(){
     return velocity;
 }
 
+void nBody::setPosition(tuple<float, float, float> pos){
+    position = pos;
+}
 tuple<float, float, float> nBody::calcForce(nBody n2){
     float d_X, d_Y, d_Z;
-    d_X = posX - n2.posX;
-    d_Y = posY - n2.posY;
-    d_Z = posZ - n2.posZ;
+    d_X = get<0>(position) - get<0>(n2.position);
+    d_Y = get<1>(position) - get<1>(n2.position);
+    d_Z = get<2>(position) - get<2>(n2.position);
 }
 
