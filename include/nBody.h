@@ -1,11 +1,18 @@
+#ifndef NBODY.H
+#define NBODY.H
+
 #include <tuple>
 using namespace std;
 class nBody{
     public:
+        nBody();
+        nBody(tuple<int,int,int> vals);
+
         void setVelocity(tuple<float,float,float> vel);
         tuple<float, float, float> returnVelocity();
-        tuple<float,float,float> calcForce(nBody n2);
 
+        void setPosition(tuple<float,float,float> pos);
+        tuple<float,float,float> calcForce(nBody n2);
 
 
     private:

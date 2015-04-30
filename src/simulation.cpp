@@ -2,6 +2,10 @@
 #include <system.h>
 
 
+void calculateSystem() {
+	
+}
+
 int main(){
     int numBodies  = 1000;
     int steps = 1000;

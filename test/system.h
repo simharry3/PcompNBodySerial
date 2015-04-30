@@ -1,4 +1,8 @@
+#ifndef SYSTEM.H
+#define SYSTEM.H
+
 #include "nBody.h"
+
 class System{
     public:
         System(int n){
