@@ -14,6 +14,7 @@ class nBody{
         tuple<float, float, float> returnForce();
         tuple<float, float, float> calcForce(nBody n2);
         tuple<float, float, float> calcAcceleration();
+        tuple<float, float, float> calcVelocity(int ts);
 
 
 

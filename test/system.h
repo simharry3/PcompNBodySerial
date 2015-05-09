@@ -11,7 +11,7 @@ class System{
         void initSystem();
         void fillBodies();
         void calculateSystem();
-        void stepSystem();
+        void stepSystem(int ts);
     private:
         int numBodies; 
         nBody* Bodies;

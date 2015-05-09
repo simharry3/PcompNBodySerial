@@ -35,16 +35,17 @@ void System::calculateSystem() {
 	}
 }
 
-void System::stepSystem() {
+void System::stepSystem(int ts) {
 	for (int i = 0; i < numBodies; ++i) {
 		nBody n = Bodies[i];
-		tuple<float, float, float> acc = n.returnAcceleration();
+		tuple<float, float, float> vel = n.calcVelocity(ts);
+		n.setVelocity(vel);
 		tuple<float, float, float> pos = n.returnPosition();
 		std::cout << "Old pos: (" << get<0>(pos) << "," << get<1>(pos) << "," << get<2>(pos) << ")" << std::endl;
 		float posX,posY,posZ;
-		posX = get<0>(pos) + get<0>(acc);
-		posY = get<1>(pos) + get<1>(acc);
-		posZ = get<2>(pos) + get<2>(acc);
+		posX = get<0>(pos) + get<0>(vel);
+		posY = get<1>(pos) + get<1>(vel);
+		posZ = get<2>(pos) + get<2>(vel);
 		n.setPosition(make_tuple(posX,posY,posZ));
 		std::cout << "New pos: (" << posX << "," << posY << "," << posZ << ")" << std::endl;
 		std::cout << std::endl;

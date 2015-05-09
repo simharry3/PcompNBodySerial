@@ -87,3 +87,12 @@ tuple<float, float, float> nBody::calcAcceleration() {
 	return A;
 }
 
+tuple<float, float, float> nBody::calcVelocity(int ts) {
+	float vX,vY,vZ = 0;
+ 	tuple<float, float, float> acc = acceleration;
+ 	vX = get<0>(velocity) + (get<0>(acc)*ts);
+ 	vY = get<1>(velocity) + (get<1>(acc)*ts);
+ 	vZ = get<2>(velocity) + (get<2>(acc)*ts);
+ 	return make_tuple(vX,vY,vZ);
+}
+
