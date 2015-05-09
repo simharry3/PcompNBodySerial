@@ -1,5 +1,3 @@
-#ifndef SYSTEM.H
-#define SYSTEM.H
 
 #include "nBody.h"
 
@@ -12,6 +10,8 @@ class System{
 
         void initSystem();
         void fillBodies();
+        void calculateSystem();
+        void stepSystem();
     private:
         int numBodies; 
         nBody* Bodies;

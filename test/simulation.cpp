@@ -8,8 +8,8 @@ int main(){
     System sys = System(numBodies);
     
     for(int n = 0; n < steps; ++n){
-        //calculateSystem();
-        //stepSystem();
+        sys.calculateSystem();
+        sys.stepSystem();
     }
     std::cout << "HERE" << std::endl;
 }
